@@ -1,0 +1,25 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<div class="auth-wrapper">
+    <div class="member-login-box register-card">
+        <h3>CREATE ACCOUNT</h3>
+
+        {% if form.errors %}
+            <div class="alert-error">Please correct the errors below.</div>
+        {% endif %}
+
+        <form method="post" class="auth-form">
+            {% csrf_token %}
+            
+            <div class="form-fields-container">
+                {{ form.as_p }}
+            </div>
+
+            <div class="login-action-row">
+                <button type="submit" class="orange-login-btn">REGISTER</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+<header class="navbar">
+    <div class="nav-container">
+        <nav class="nav-links">
+            <a href="/" class="nav-link-item">Home</a>
+<!--            <a href="#" class="nav-link-item">Features</a>-->
+<!--            <a href="#" class="nav-link-item">About</a>-->
+<!--            <a href="#" class="nav-link-item">Service</a>-->
+<!--            <a href="#" class="nav-link-item">Contact</a>-->
+
+            {% if request.user.is_authenticated %}
+                <form action="{% url 'fbv-logout' %}" method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit" class="nav-btn logout-btn">Logout</button>
+                </form>
+            {% else %}
+                <div class="auth-nav-group">
+                    <a href="{% url 'fbv-login' %}" class="nav-btn login-btn">Login</a>
+                    <span class="nav-pipe">|</span>
+                    <a href="{% url 'register' %}" class="nav-btn register-nav-btn">Register</a>
+                </div>
+            {% endif %}
+        </nav>
+    </div>
+</header>

@@ -1,0 +1,398 @@
+/* --- Global Reset & Clean White Background Theme --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8fafc; /* Clean, light modern background */
+    color: #1e293b;            /* Dark readable text */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Card-style Navbar --- */
+.navbar {
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Card shadow */
+    border-bottom: 3px solid #ff6b00;            /* Orange accent line */
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ff6b00;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-link-item {
+    color: #64748b;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-link-item:hover {
+    color: #ff6b00;
+}
+
+.welcome-text {
+    font-size: 0.85rem;
+    color: #475569;
+}
+
+.nav-btn {
+    background-color: #f1f5f9;
+    color: #334155;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.nav-btn:hover {
+    background-color: #e2e8f0;
+}
+
+.login-btn {
+    background-color: #ff6b00;
+    color: #fff;
+    font-weight: 600;
+}
+
+.login-btn:hover {
+    background-color: #e56000;
+}
+
+.logout-btn {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.admin-badge {
+    background-color: #fef3c7;
+    color: #b45309;
+}
+
+/* --- Main Container --- */
+.main-container {
+    flex: 1;
+    max-width: 1100px;
+    width: 90%;
+    margin: 2.5rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Home Page Card Layout --- */
+.home-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-section {
+    background: #ffffff;                  /* White Card */
+    border: 1px solid #e2e8f0;
+    border-top: 5px solid #ff6b00;        /* Orange accent top border */
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+    max-width: 650px;
+    width: 100%;
+    text-align: center;
+}
+
+.hero-title {
+    color: #1e293b;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.hero-subtitle {
+    color: #64748b;
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.hero-text {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    color: #334155;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #ff6b00;            /* Orange Card Button */
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(255, 107, 0, 0.25);
+}
+
+.submit-btn:hover {
+    background-color: #e56000;
+}
+
+.btn-auto {
+    display: inline-block;
+    width: auto;
+    padding: 0.75rem 2.5rem;
+    text-decoration: none;
+}
+
+/* --- Login Page Card Layout (White card with orange accent) --- */
+.auth-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.member-login-box {
+    background: #ffffff;                  /* White Card */
+    border: 1px solid #e2e8f0;
+    border-top: 5px solid #ff6b00;        /* Orange accent top border */
+    color: #333;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.member-login-box h3 {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    color: #1e293b;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.member-login-box input[type="text"],
+.member-login-box input[type="password"] {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    outline: none;
+    text-align: center;
+    background-color: #f8fafc;
+    color: #1e293b;
+    transition: border-color 0.2s;
+}
+
+.member-login-box input[type="text"]:focus,
+.member-login-box input[type="password"]:focus {
+    border-color: #ff6b00;
+}
+
+.member-login-box input::placeholder {
+    color: #94a3b8;
+    letter-spacing: 0.5px;
+}
+
+.login-action-row {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.orange-login-btn {
+    width: 100%;
+    background-color: #ff6b00;            /* Vibrant orange button */
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(255, 107, 0, 0.3);
+    transition: background 0.2s;
+}
+
+.orange-login-btn:hover {
+    background-color: #e56000;
+}
+
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 0.75rem;
+    color: #64748b;
+    padding: 0 0.5rem;
+}
+
+.login-options a {
+    color: #ff6b00;
+    text-decoration: none;
+}
+
+.login-options a:hover {
+    text-decoration: underline;
+}
+
+.alert-error {
+    background-color: #fee2e2;
+    color: #991b1b;
+    padding: 0.5rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+/* --- Card-style Footer --- */
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: #64748b;
+    font-size: 0.8rem;
+    background-color: #ffffff;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* --- Extra styling for Django forms inside cards --- */
+.register-card {
+    max-width: 450px !important; /* Slightly wider to fit registration labels nicely */
+    text-align: left !important;
+}
+
+.form-fields-container p {
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    color: #475569;
+}
+
+.form-fields-container label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: #1e293b;
+}
+
+.form-fields-container input {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    outline: none;
+    background-color: #f8fafc;
+    color: #1e293b;
+    transition: border-color 0.2s;
+}
+
+.form-fields-container input:focus {
+    border-color: #ff6b00;
+}
+
+/* Style help text provided by UserCreationForm */
+.helptext, .helptext ul {
+    font-size: 0.75rem;
+    color: #64748b;
+    margin-top: 0.25rem;
+    padding-left: 0.5rem;
+    list-style-position: inside;
+}
+
+/* --- Navbar Auth Group & Pipe --- */
+.auth-nav-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-pipe {
+    color: #cbd5e1;
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+
+.register-nav-btn {
+    background-color: #f1f5f9;
+    color: #ff6b00;
+    font-weight: 600;
+    border: 1px solid #ff6b00;
+    transition: all 0.2s;
+}
+
+.register-nav-btn:hover {
+    background-color: #ff6b00;
+    color: #fff;
+}
+
+/* --- Login Card Container & Below-Card Text --- */
+.auth-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.below-card-text {
+    margin-top: 1.2rem;
+    font-size: 0.9rem;
+    color: #64748b;
+    text-align: center;
+}
+
+.below-card-text a {
+    color: #ff6b00;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 4px;
+}
+
+.below-card-text a:hover {
+    text-decoration: underline;
+}

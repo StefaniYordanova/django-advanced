@@ -1,0 +1,21 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<div class="home-wrapper">
+    <div class="hero-section">
+        <h1 class="hero-title">Welcome to DjangoApp!</h1>
+        <p class="hero-subtitle">
+            A secure and reliable system for managing users, sessions, and cookies in Django.
+        </p>
+
+        {% if request.user.is_authenticated %}
+            <p class="hero-text">You are already logged in as <strong>{{ request.user.username }}</strong>.</p>
+            <a href="{% url 'home' %}" class="submit-btn btn-auto">Go to Home page</a>
+        {% else %}
+            <div class="hero-actions">
+                <a href="{% url 'fbv-login' %}" class="submit-btn btn-auto">Login to System</a>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

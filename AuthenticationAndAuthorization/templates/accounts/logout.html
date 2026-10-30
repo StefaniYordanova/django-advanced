@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="home-wrapper">
+    <div class="hero-section">
+        <h1 class="hero-title">You Have Been Logged Out</h1>
+        <p class="hero-subtitle">
+            You have successfully securely signed out of your account. Thank you for visiting!
+        </p>
+        
+        <div class="hero-actions" style="margin-top: 2rem;">
+            <a href="{% url 'fbv-login' %}" class="submit-btn btn-auto">Log In Again</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

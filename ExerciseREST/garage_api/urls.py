@@ -11,4 +11,8 @@ urlpatterns = [
         path('', views.ListCreateAPIManufacturerView.as_view()),        # list + create
         path('<int:pk>/', views.DetailAPIManufacturerView.as_view()),   # detail + update + delete
     ])),
+    path('parts/', include([
+        path('', views.ListCreatePartAPIView.as_view()),            # list + create
+        path('<int:pk>/', views.DetailPartAPIView.as_view()),       # detail + update + delete
+    ])),
 ]

@@ -111,4 +111,12 @@ class CarStatsAPIView(APIView):
         )
 
         return Response({"stats": stats}, status=status.HTTP_200_OK)
-    
+
+
+
+class ListCreatePartAPIView(APIView):
+    ...
+
+
+class DetailPartAPIView(APIView):
+    ...

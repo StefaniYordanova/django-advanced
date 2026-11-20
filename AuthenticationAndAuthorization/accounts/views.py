@@ -3,8 +3,9 @@ from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import user_passes_test
+from django.contrib.auth.views import LoginView, LogoutView, login_required
 
-
+@login_required()
 def home_page(request: HttpRequest) -> HttpResponse:
     return render(request, 'accounts/home-page.html')
 

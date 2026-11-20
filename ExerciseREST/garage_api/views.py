@@ -1,4 +1,4 @@
-from django.db.migrations import serializer
+from django.db.models.aggregates import Count, Min, Max
 from rest_framework import status
 from rest_framework.request import Request
 from rest_framework.response import Response
@@ -100,3 +100,15 @@ class DetailAPICarView(APIView):
         car = self.get_object(pk)
         car.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+class CarStatsAPIView(APIView):
+    def get(self, request: Request) -> Response:
+        stats = Car.objects.aggregate(
+            total_cars=Count('id'),
+            oldest_year=Min('year'),
+            newest_year=Max('year'),
+        )
+
+        return Response({"stats": stats}, status=status.HTTP_200_OK)
+    

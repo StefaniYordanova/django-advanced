@@ -12,6 +12,8 @@ class Manufacturer(models.Model):
         max_length=10,
     )
 
+    founded_year = models.PositiveIntegerField()
+
 
 class Car(models.Model):
     model = models.CharField(
@@ -20,7 +22,7 @@ class Car(models.Model):
 
     year = models.PositiveIntegerField(
         validators=[
-            MinValueValidator(2000),
+            MinValueValidator(1900),
         ]
     )
 
